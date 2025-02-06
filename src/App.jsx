@@ -1,12 +1,16 @@
-// import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
-import './App.css'
-import Header from './components/header'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import './App.css';
+import LandingPage from "./page/landing/landing_page";
+import TestPage  from "./page/test_page";
 function App() {
   return (
-    <>
-      <Header/>
-    </>
-  )
+    <Router> 
+      <Routes> 
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/write" element={<TestPage />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
